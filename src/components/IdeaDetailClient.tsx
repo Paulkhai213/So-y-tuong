@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { use } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Sidebar from '@/components/Sidebar';
@@ -19,8 +18,7 @@ const STATUS_CONFIG = {
     archived: { label: 'Lưu trữ', icon: Archive, className: 'status-archived' },
 };
 
-export default function IdeaDetailPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = use(params);
+export default function IdeaDetailClient({ id }: { id: string }) {
     const router = useRouter();
     const [idea, setIdea] = useState<Idea | null>(null);
     const [categories, setCategories] = useState<Category[]>([]);

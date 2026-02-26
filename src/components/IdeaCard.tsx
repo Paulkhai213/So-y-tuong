@@ -55,7 +55,7 @@ export default function IdeaCard({ idea, categories, onUpdate, onDelete }: IdeaC
         .slice(0, 120);
 
     return (
-        <Link href={`/ideas/${idea.id}`} style={{ textDecoration: 'none' }}>
+        <Link href={`/ideas/detail?id=${idea.id}`} style={{ textDecoration: 'none' }}>
             <div
                 className="card-hover"
                 style={{

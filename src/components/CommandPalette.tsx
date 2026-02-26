@@ -46,7 +46,7 @@ export default function CommandPalette({ apps, ideas, onClose, onNavigate }: Com
             type: 'idea' as const,
             label: idea.title,
             sublabel: idea.status === 'seed' ? '🌱 Hạt mầm' : idea.status === 'active' ? '⚡ Hoạt động' : '📦 Lưu trữ',
-            path: `/ideas/${idea.id}`,
+            path: `/ideas/detail?id=${idea.id}`,
         })),
     ];
 
